@@ -12,7 +12,10 @@ let passwordReturn = "";
 let passwordElements = "";
 let builtArray = [];
 
+
+
 function generatePassword() {
+
   passwordLength = (prompt("How many characters do you want in your password? Hint: Between 8 and 128 characters."))
   
   //Loop back to start if input is less than 8 or greater than 128
@@ -39,13 +42,17 @@ function generatePassword() {
   }
 
 
+  if (builtArray.length === 0) { 
+    alert("You must select at least one character type to generate a password!");
+    return generatePassword();
+  }
+
 
   for (let i = 0; i < passwordLength; i++) {
     passwordElements += builtArray[Math.floor(Math.random()*builtArray.length)];
   }
-  
-//Does not guarantee a selection from each inital array
 
+    builtArray = [];
     return passwordElements;
 }
 
@@ -55,7 +62,6 @@ function writePassword() {
   let passwordText = document.querySelector("#password");
   console.log(password);
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
