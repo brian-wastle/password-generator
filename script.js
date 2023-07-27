@@ -21,7 +21,7 @@ function generatePassword() {
   //Loop back to start if input is less than 8 or greater than 128
   //display alert to let user know number has to be within 8-128  
   if (passwordLength < 8 || passwordLength > 128) { 
-    alert("Your password must be between 8 and 20 characters");
+    alert("Your password must be between 8 and 128 characters");
     return generatePassword();
   }
   
