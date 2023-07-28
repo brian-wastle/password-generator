@@ -11,7 +11,7 @@ let passwordLength = "";
 let passwordReturn = "";
 let passwordElements = "";
 let builtArray = [];
-
+let passwordText = document.querySelector("#password");
 
 
 function generatePassword() {
@@ -58,10 +58,12 @@ function generatePassword() {
 
 
 function writePassword() {
+  passwordElements = '';
   let password = generatePassword();
-  let passwordText = document.querySelector("#password");
+  passwordText.value = '';
   passwordText.value = password;
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
