@@ -20,4 +20,6 @@ Once all prompts have been answered successfully, you can copy and paste your ne
 
 ![Screenshot of Password Generator webpage](./screenshot.png)
 
+https://brian-wastle.github.io/password-generator/
+
 
